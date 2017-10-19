@@ -1,0 +1,61 @@
+Rathee Sir is a strict teacher and an even strict invigilator. He doesn't want anyone to cheat in an exam. But sometimes the examination hall is so big that he is not able to keep an eye on everyone.
+
+Consider the examination hall to be consisting of N+2 desks, all arranged in a single line. The front-most and the last desk are already occupied by Pranjal and Paras, who never skip any exam.
+
+Since Rathee sir doesn't know how many students are about to attend the exam, he comes up with an idea! Whenever someone enters the examination hall, Rathee sir makes them sit on a desk that is as far from each other as possible. To be clear, he follows the follows a set of rules : For each empty desk, he computes two values 'lD' and 'rD', each of which is the number of empty desks between 'D' and the closest occupied desk to the left or right, respectively. Then he chooses the desks with the farthest closest neighbour, i.e. those desks D for which min(lD, rD) is maxium. If there is only one such desk, he chooses it; otherwise, he chooses the one among those where max(lD, rD) is maximum. If there are still multiple tied desks, he chooses the leftmost desk among those.
+
+K Students are about to enter the examination hall, after Pranjal and Paras (who are already sitting on the front and last desk). Each one chooses their stall before the next one arrives. Nobody ever leaves.
+
+When the last Student chooses his Desk D, what will the values of max(lD, rD) and min(lD, rD) be ?
+
+### INPUT
+
+The first line of the input gives the number of test cases, T. T lines follow. Each line describes a test case with two integers N and K, as described above.
+
+### OUTPUT
+
+For each test case, output one line containing max(lD, rD) and min(lD, rD) as calculated for the last Student to enter the Examination Hall for their chosen Desk D.
+
+#### EXAMPLE
+###### INPUT
+    5
+    4 2
+    5 2
+    6 2
+    1000 1000
+    1000 1
+
+###### OUTPUT
+    1 0
+    1 0
+    1 1
+    0 0
+    500 499
+
+### EXPLANATION
+Here X denotes Occupied and _ denotes Vacant.
+
+In **Case #1**, desks are as : "X _ _ _ _ X"
+<br/>After one student desks are : "X _ X _ _ X"
+<br/>After second student desks are : "X _ X X _ X"
+
+In **Case #2**, desks are as : "X _ _ _ _ _ X"
+<br/>After one student desks are : "X _ _ X _ _ X"
+<br/>After second student desks are : "X X _ X _ _ X"
+
+In **Case #3**, desks are as : "X _ _ _ _ _ _ X"
+<br/>After one student desks are : "X _ _ X _ _ _ X"
+<br/>After second student desks are : "X _ _ X _ X _ X"
+
+In **Case #4**, every desk is occupied at the end, no matter what the choices are.
+
+
+### CONSTRAINTS
+
+1 <= K <= N
+
+**File 1** : 1 <= N <= 1000     //***10 Marks***
+
+**File 2** : 1 <= N <= 10^6     //***10 Marks***
+
+**File 3** : 1 <= N <= 10^18    //***10 Marks***

@@ -1,0 +1,62 @@
+Shivani, a BBA student wants to create a new Dictionary for her Summer Project. But this Dictionary is a little different than the generic Dictionary. It has its words arranged according to the usage, such that the most used word is kept at the first and the least used word is kept at last. The quantitative usage of a word is determined by its usage-index. The higher a word's usage-index, the earlier it comes in the Dictionary. If the usage-index of a few words are same, they are to be arranged lexicographically, but with one condition. The condition is that if the initial letters of any word contains another small word (like "canteen" contains "can", "plumber" contains "plum"), the bigger word must come before the smaller word.
+
+She want's her Dictionary to be ready as soon as possible and has a lot of work to do. She has no time to work on the arranging, and asks for your help.
+
+#### INPUT
+First line of the input will contain N (No. of Words to follow)
+The next N lines will each contain a word and its usage-index seperated by a space.
+
+#### OUTPUT
+You need to print N arranged lines (each containing only the word)
+
+#### EXAMPLE
+###### INPUT
+    6
+    Work 2
+    Workshop 2
+    Library 18
+    Canteen 90
+    Bunk 99
+    Samosa 99
+
+###### OUTPUT
+    Bunk 99
+    Samosa 99
+    Canteen 90
+    Library 18
+    Workshop 2
+    Work 2
+
+#### EXPLANATION
+Primary arrangement is on the basis of Usage-Index so the sequence becomes
+
+    Bunk, Samosa
+    Canteen
+    Library
+    Workshop, Work
+
+Secondary arrangment is lexicograpic, so
+
+    Bunk
+    Samosa
+    Canteen
+    Library
+    Work
+    Workshop
+
+But according to additional condition, Workshop contains Work, so
+
+    Bunk
+    Samosa
+    Canteen
+    Library
+    Workshop
+    Work
+
+#### CONSTRAINTS
+
+1 <= N < 10^5
+
+1 <= Word_Length <= 1000
+
+1 <= Usage-Index < 10^5
