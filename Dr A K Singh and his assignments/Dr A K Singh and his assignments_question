@@ -1,0 +1,21 @@
+Yathmesh is a college student.
+
+His physics professor Dr A.K Singh keeps on giving him assignments.
+
+This time professor gave him an interesting problem.Yathmesh will be given a sentance he need to reverse each word of that sentance individually and tell the answer to the professor.
+
+Yathmesh is not a good coder but he knows that if a program can be made to solve this problem then it would be easy for him to answer questions of his professor.
+
+Your task is to help Yathmesh to make a program that would reverse each word in a given sentance.
+
+Input format
+
+String s
+
+Output format
+
+Just print the modified string
+
+Constraints
+
+1<= length of String <=3000
